@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.contactapp.Controller">
+    <left>
+        <ListView fx:id="contactsListView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets />
+            </BorderPane.margin>
+        </ListView>
+    </left>
+    <center>
+        <GridPane alignment="CENTER" hgap="8.0" maxWidth="1.7976931348623157E308" prefHeight="294.0" prefWidth="368.0" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints halignment="RIGHT" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" />
+            </rowConstraints>
+            <children>
+                <Label text="First name" />
+                <Label text="Last name" GridPane.rowIndex="1" />
+                <Label text="Email" GridPane.rowIndex="2" />
+                <Label text="Phone number" GridPane.rowIndex="3" />
+                <Label text="Student ID" GridPane.rowIndex="4" />
+                <TextField fx:id="firstNameTextField" style="-fx-border-color: aqua blue;" GridPane.columnIndex="1" />
+                <TextField fx:id="lastNameTextField" style="-fx-border-color: aqua blue;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <TextField fx:id="emailTextField" style="-fx-border-color: aqua blue;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <TextField fx:id="phoneNumberTextField" style="-fx-border-color: aqua blue;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <TextField fx:id="studentIdTextField" style="-fx-border-color: aqua blue;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <HBox prefHeight="100.0" prefWidth="200.0" spacing="8.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#addContactButtonPressed" style="-fx-border-color: aqua blue; -fx-background-color: aqua blue;" text="Add" />
+                        <Button mnemonicParsing="false" onAction="#updateContactButtonPressed" style="-fx-border-color: aqua blue; -fx-background-color: aqua blue;" text="Update" />
+                        <Button mnemonicParsing="false" onAction="#deleteContactButtonPressed" style="-fx-border-color: aqua blue; -fx-background-color: aqua blue;" text="Delete" />
+                    </children>
+                </HBox>
+                <Text fx:id="errorMessage" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="211.7294921875" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            </children>
+            <BorderPane.margin>
+                <Insets />
+            </BorderPane.margin>
+            <padding>
+                <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+            </padding>
+        </GridPane>
+    </center>
+    <padding>
+        <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+    </padding>
+</BorderPane>
